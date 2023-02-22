@@ -1,0 +1,27 @@
+body{
+    background-color: aliceblue;
+}
+
+
+
+.img-thumbnail{
+    height: 70%;
+}
+.full-screen-image {
+    background:no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+  }
+
+.input{
+    margin-bottom: 15px;
+    width: 50%;
+    margin: auto;
+  }
+
+.deleteForm{
+    display: inline;
+}
+a{
+    text-decoration: none;
+}

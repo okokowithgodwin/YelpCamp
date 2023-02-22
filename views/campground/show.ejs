@@ -1,0 +1,35 @@
+<%- include('../partials/header')%>
+<h1><%=campground.name%> Campground</h1>
+<div >
+    <div>
+        <p>
+            <img class="img-thumbnail full-screen-image" src="<%=campground.image%>" alt="<%=campground.name%>">
+        </p>
+        <p>
+            <%=campground.description%> 
+        </p>
+        <p><em>Posted by: ~<%=campground.author.username%></em></p>
+    </div>
+</div>
+
+<p>
+    <%if(currentUser && campground.author.id.equals(currentUser.id)){%>
+    <a class="btn btn-primary" href="/campgrounds/<%=campground.id%>/edit">Edit</a>
+    <form action="/campgrounds/<%=campground.id%>?_method=DELETE" method="post" class="deleteForm"><button class="btn btn-danger">Delete</button></form>
+    <%}%>
+</p>
+<hr>
+<%if(currentUser){%>
+    <h3>Comments</h3><a class="btn btn-primary" href="/campgrounds/<%=campground.id%>/comments/new">+</a>
+<%}%>
+<% campground.comments.forEach((comment)=>{%>
+  <p><em><%=comment.text%></em>~ <strong><%=comment.author.username%>  </strong><br>
+    <a href="#">Like</a> <a href="#">Reply</a>
+</p>
+
+    <%if(currentUser && comment.author.id.equals(currentUser.id)){%>
+    <form action="/campgrounds/<%=campground.id%>/comments/<%=comment.id%>?_method=DELETE" method="post" class="deleteForm"><button>Delete</button></form>
+    <%}%>  
+<%})%>
+
+<%- include('../partials/footer')%>

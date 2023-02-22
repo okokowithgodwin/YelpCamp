@@ -1,0 +1,17 @@
+<%- include('../partials/header')%>
+
+<h2><%= message %></h2>
+<h1>SIGN IN</h1>
+<form action="/login" method="post">
+    <div>
+        <input type="text" class="form-control input" name="username" id="author" placeholder="USERNAME">
+    </div>
+    <div>
+        <input type="password" class="form-control input" name="password">
+    </div>
+    <input type="submit" class="form-control input" value="Sign In" name="" id="">
+</form>
+<p>
+    Don&apos;t have an account, <a href="/register">Sign Up</a>
+</p>
+<%- include('../partials/footer')%>

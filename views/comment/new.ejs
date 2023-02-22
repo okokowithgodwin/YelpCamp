@@ -1,0 +1,9 @@
+<%- include('../partials/header')%>
+<form action="/campgrounds/<%=campground._id%>/comments" method="post">
+    <div>
+        <input type="text" class="form-control input" name="comment[text]" id="text" placeholder="TEXT">
+    </div>
+  
+    <button>Comment</button>
+</form>
+<%- include('../partials/footer')%>

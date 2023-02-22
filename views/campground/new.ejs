@@ -1,0 +1,17 @@
+<%- include('../partials/header')%>
+<h2>Add Campground</h2>
+<form action="/campgrounds" method="post">
+    <div class="form-group">
+        <input type="text" class="form-control input" name="campground[name]" id="name" placeholder="NAME">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control input" name="campground[image]" id="image" placeholder="IMAGE">
+    </div>
+   
+    <div class="form-group">
+        
+        <textarea class="form-control input" rows="5" name="campground[description]" id="description" placeholder="DESCRIPTION"></textarea>
+      </div>
+    <input type="submit" class="form-control input" name="" value="Submit" id="">
+</form>
+<%- include('../partials/footer')%>

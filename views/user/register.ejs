@@ -1,0 +1,14 @@
+<%- include('../partials/header')%>
+<form action="/register" method="post">
+    <div>
+        <input type="text" class="form-control input" name="username" id="author" placeholder="USERNAME">
+    </div>
+    <div>
+        <input type="password" class="form-control input" name="password" placeholder="PASSWORD">
+    </div>
+  <input type="submit" class="form-control input" value="Create Account" name="" id="">
+</form>
+<p>
+Already has an account,<a href="/login">Sign in</a>
+</p>
+<%- include('../partials/footer')%>
